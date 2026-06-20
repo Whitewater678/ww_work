@@ -80,17 +80,17 @@ for i, beta in enumerate(tqdm(beta_range, desc="Computing β rows")):
         heatmap_data[i, j] = compute_thermal_expectation(n_qubits, lam, beta)
 
 # ======================
-# 5. 绘制热力图（Figure 2 风格）
+# 5. 绘制热力图
 # ======================
 # ======================
-# 5. 绘制热力图（Figure 2 风格 · viridis）
+# 5. 绘制热力图
 # ======================
 plt.figure(figsize=(8, 6))
 
 im = plt.imshow(
     heatmap_data,
     extent=[lambda_range.min(), lambda_range.max(), beta_range.min(), beta_range.max()],
-    cmap='viridis',        # ✅ 改回 viridis
+    cmap='viridis', 
     aspect='auto',
     origin='lower'
 )
